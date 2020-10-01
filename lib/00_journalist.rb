@@ -42,4 +42,13 @@ def sort_alphabetic(list)
   puts "This is the list of handles in alphabetical order: #{sort_alphabetic}"
 end
 
-#sort_alphabetic(handle_array)
+sort_alphabetic(handle_array)
+
+def sort_length(list)
+  new_handle_arr = filter_at(list)
+  sort = new_handle_arr.sort_by {|word| word.length}
+  puts "This is a list of handles by word length: #{sort}"
+end
+
+sort_length(handle_array)
+
