@@ -52,3 +52,27 @@ end
 
 sort_length(handle_array)
 
+def find_name(lst)
+  new_handle_arr = filter_at(lst)
+  index_array = new_handle_arr.find_index { |handle| handle == "epenser" }
+  puts "@epenser is number #{index_array} in the list"
+end
+
+find_name(handle_array)
+
+def nb_character_repartition(lst)
+  handle_without = filter_at(lst)
+
+  nb_characters = []
+  handle_without.each do |c|
+    nb_characters << c.length
+  end
+
+length_sorted = nb_characters.tally
+
+length_sorted.sort.each do |key, value|
+  puts "Il y a #{value} handle(s) avec #{key} caractères"
+  end
+end
+
+nb_character_repartition(handle_array)
