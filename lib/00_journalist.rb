@@ -22,6 +22,16 @@ end
 
 chars_5
 
-def is_upper
-  
+def new_handle_array
+  new_handle_array = Array.new
 end
+
+def new_handle_array
+  new_handle_array = handle_array.map {|handle| handle.sub("@", "")}
+end
+
+def sort_alphabetic
+  sort_alphabetic = handle_array.sort(&:casecmp)
+end
+
+puts sort_alphabetic
